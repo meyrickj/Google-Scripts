@@ -1,0 +1,6 @@
+function autoArchive() {  
+    var emails = GmailApp.search('label:inbox older_than:4d');
+    for (var i = 0; i < emails.length; i++) {
+        emails[i].moveToArchive();
+    }
+}
